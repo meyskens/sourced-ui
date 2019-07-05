@@ -136,4 +136,4 @@ FLASK_APP_MUTATOR = mutator
 
 # This parameter documented as deprecated but frontend still uses it
 # Should match `--timeout` value of gunicorn
-SUPERSET_WEBSERVER_TIMEOUT = 300
+SUPERSET_WEBSERVER_TIMEOUT = 86400

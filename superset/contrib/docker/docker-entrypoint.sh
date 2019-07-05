@@ -33,7 +33,7 @@ elif [ "$SUPERSET_ENV" = "production" ]; then
     celery worker --app=superset.sql_lab:celery_app --pool=gevent -Ofair &
     gunicorn --bind  0.0.0.0:8088 \
         --workers $((2 * $(getconf _NPROCESSORS_ONLN) + 1)) \
-        --timeout 300 \
+        --timeout 86400 \
         --limit-request-line 0 \
         --limit-request-field_size 0 \
         superset:app
